@@ -11,8 +11,7 @@ def calculate_order_total(items, discount=0, tax_rate=0.18):
     else:
         shipping = 50
 
-    total = subtotal + shipping
-    total = total * tax_rate
+    total = (subtotal + shipping) * (1 + tax_rate)
 
     return round(total, 2)
 
